@@ -10,8 +10,8 @@ import java.util.Optional;
 
 public class ShapeFactory {
     private static final int BASE_START_INDEX = 0;
-    private static final int BASE_EDN_INDEX = 3;
-    private static final int VERTEX_INDEX = 3;
+    private static final int BASE_EDN_INDEX = 4;
+    private static final int VERTEX_INDEX = 4;
     private static final int POINTS_CORRECT_COUNT = 5;
 
     public Optional<Pyramid> createPyramidFromPoints(List<Point3D> points) {

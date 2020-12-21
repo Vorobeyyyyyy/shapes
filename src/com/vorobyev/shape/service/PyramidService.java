@@ -24,7 +24,7 @@ public class PyramidService {
         float height = Math.abs(baseZ - vertexZ);
         float length = basePoints.get(SECOND_BASE_POINT).getY() - basePoints.get(FIRST_BASE_POINT).getY();
         float width = basePoints.get(THIRD_BASE_POINT).getX() - basePoints.get(SECOND_BASE_POINT).getX();
-        return (width * length * height / 3);
+        return ((width * length * height) / 3d);
     }
 
     public double calculateArea(Pyramid pyramid) {

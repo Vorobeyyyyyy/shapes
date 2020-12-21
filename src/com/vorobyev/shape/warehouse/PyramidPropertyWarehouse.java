@@ -15,8 +15,11 @@ public class PyramidPropertyWarehouse {
 
     private final HashMap<Long, PyramidProperty> warehouse = new HashMap<>();
 
-    public static PyramidPropertyWarehouse getInstance(){
+    public static PyramidPropertyWarehouse getInstance() {
         return instance;
+    }
+
+    private PyramidPropertyWarehouse() {
     }
 
     public int size() {

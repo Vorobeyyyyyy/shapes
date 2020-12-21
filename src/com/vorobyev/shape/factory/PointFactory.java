@@ -30,7 +30,7 @@ public class PointFactory {
         if (values.size() % VALUES_CORRECT_SIZE != 0) {
             logger.log(Level.WARN, "Floats count ({}) is not multiple of {}. Some values will be skipped", values.size(), VALUES_CORRECT_SIZE);
         }
-        for (int i = 0; i < values.size() - VALUES_CORRECT_SIZE; i += VALUES_CORRECT_SIZE) {
+        for (int i = 0; i <= values.size() - VALUES_CORRECT_SIZE; i += VALUES_CORRECT_SIZE) {
             Point3D point3D = new Point3D(values.get(i + FIRST_VALUE), values.get(i + SECOND_VALUE), values.get(i + THIRD_VALUE));
             result.add(point3D);
         }

@@ -8,10 +8,10 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PyramidParser {
+public class PyramidCoordinatesParser {
     private static final Logger logger = LogManager.getLogger();
 
-    private static final String DELIMITER = "/";
+    private static final String DELIMITER = ";";
 
     public List<Float> parseString(String dataString) {
         if (!PyramidValidator.isPyramidDataValid(dataString)) {
@@ -24,7 +24,7 @@ public class PyramidParser {
                 Float floatValue = Float.parseFloat(stringFloat);
                 result.add(floatValue);
             } catch (NumberFormatException exception) {
-                logger.log(Level.ERROR, "Error parsing ({})", exception.getMessage());
+                logger.log(Level.ERROR, "Error parsing ({}) - ({})", stringFloat, exception.getMessage());
             }
         }
         return result;

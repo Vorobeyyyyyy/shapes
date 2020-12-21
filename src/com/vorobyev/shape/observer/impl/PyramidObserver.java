@@ -10,7 +10,7 @@ import com.vorobyev.shape.warehouse.PyramidPropertyWarehouse;
 import java.util.EventObject;
 
 public class PyramidObserver implements Observer {
-    PyramidPropertyWarehouse propertyWarehouse = PyramidPropertyWarehouse.getInstance();
+    private final PyramidPropertyWarehouse propertyWarehouse = PyramidPropertyWarehouse.getInstance();
 
     private static final PyramidObserver instance = new PyramidObserver();
 
